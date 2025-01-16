@@ -5,12 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/browser/Browser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/browser/BrowserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/models/ProfileModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/browser.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/UserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,12 +47,146 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.TestAccount.checkAccountButtonTest.executor": "Run",
+    "JUnit.TestAccount.checkOrderButtonTest.executor": "Run",
+    "JUnit.TestAccount.checkProfileButtonTest.executor": "Run",
+    "JUnit.TestAccount.executor": "Debug",
+    "JUnit.TestAccount.urlTest.executor": "Run",
+    "JUnit.UserTests.executor": "Debug",
+    "JUnit.UserTests.placeOrderTest.executor": "Run",
+    "JUnit.UserTests.profileTest.executor": "Run",
+    "JUnit.UserTests.urlTest.executor": "Run",
+    "JUnit.test Chrome.executor": "Run",
+    "JUnit.test Yandex.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "develop3",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Java/PracticumProjects/UI_Advanced_Samokat_Alesya",
     "onboarding.tips.debug.path": "C:/Java/PracticumProjects/QA-Java-Diplom-3/src/main/java/org/example/Main.java"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.UserTests.profileTest">
+    <configuration name="TestAccount.urlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.TestAccount" />
+      <option name="METHOD_NAME" value="urlTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.UserTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTests.placeOrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.UserTests" />
+      <option name="METHOD_NAME" value="placeOrderTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTests.profileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.UserTests" />
+      <option name="METHOD_NAME" value="profileTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTests.urlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.UserTests" />
+      <option name="METHOD_NAME" value="urlTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test Chrome" type="JUnit" factoryName="JUnit">
+      <module name="QA-Java-Diplom-3" />
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.TestAccount" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-DtestBrowser=CHROME" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test Yandex" type="JUnit" factoryName="JUnit">
+      <module name="QA-Java-Diplom-3" />
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.TestAccount" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-DtestBrowser=YANDEX" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.test Chrome" />
+      <item itemvalue="JUnit.test Yandex" />
+      <item itemvalue="JUnit.UserTests" />
+      <item itemvalue="JUnit.UserTests.placeOrderTest" />
+      <item itemvalue="JUnit.UserTests.profileTest" />
+      <item itemvalue="JUnit.UserTests.urlTest" />
+      <item itemvalue="JUnit.TestAccount.urlTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTests.profileTest" />
+        <item itemvalue="JUnit.UserTests.placeOrderTest" />
+        <item itemvalue="JUnit.UserTests.urlTest" />
+        <item itemvalue="JUnit.UserTests" />
+        <item itemvalue="JUnit.TestAccount.urlTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,7 +202,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/stellarburgers/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
