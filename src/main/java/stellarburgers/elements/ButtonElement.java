@@ -16,6 +16,12 @@ public class ButtonElement {
         buttonElement = $(new By.ByXPath(locator));
     }
 
+    // а можем вместо локатора передать By
+    // или Сss, или name, или class - конструктор можно написать для чего угодно
+    public ButtonElement(By locator) {
+        buttonElement = $(locator);
+    }
+
     // а в этом конструкторе передаём готовый SelenideElement
     // у нас помимо buttonElement ещё могут быть ButtonElementCollection
     // т.е. иногда по одному локатору у нас м. находиться несколько кнопок (инпутов)
@@ -28,11 +34,6 @@ public class ButtonElement {
         buttonElement = (SelenideElement) element;
     }
 
-    // а можем вместо локатора передать By
-    // или Сss, или name, или class - конструктор можно написать для чего угодно
-    public ButtonElement(By locator) {
-        buttonElement = $(locator);
-    }
 
     public void click() {
         buttonElement.shouldBe(enabled);

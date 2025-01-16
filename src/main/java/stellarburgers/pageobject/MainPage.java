@@ -29,12 +29,11 @@ public class MainPage {
         profileButton.click();
     }
 
-    public String orderButtonClick() {
+    public void orderButtonClick() {
         MainPage mainPage = new MainPage();
         mainPage.openMainPage();
         ButtonElement orderButton = new ButtonElement(orderButtonLocator);
         orderButton.click();
-        return "";
     }
 
 
