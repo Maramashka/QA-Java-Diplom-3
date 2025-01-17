@@ -1,6 +1,5 @@
 package stellarburgers.pageobject;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import stellarburgers.elements.ButtonElement;
 
@@ -8,9 +7,11 @@ import static stellarburgers.pageobject.Constants.MAIN_PAGE;
 
 public class MainPage {
     WebDriver driver;
+    MainPage mainPage = new MainPage();
 
     private String profileButtonLocator = ".//*[text()='Личный Кабинет']";
-    private String orderButtonLocator = ".//button[text(), 'Оформить заказ']";
+    private String orderButtonLocator = ".//button[text()='Оформить заказ']";
+    private String loginIntoAccountButtonLocator = ".//button[@text()='Войти в аккаунт']";
 
     public MainPage() {
     }
@@ -24,18 +25,22 @@ public class MainPage {
         return this;
     }
 
-    public void accountButtonClick() {
-        ButtonElement profileButton = new ButtonElement(profileButtonLocator);
-        profileButton.click();
+    public void profileButtonClick() {
+        ButtonElement element = new ButtonElement(profileButtonLocator);
+        element.click();
     }
 
     public void orderButtonClick() {
-        MainPage mainPage = new MainPage();
         mainPage.openMainPage();
-        ButtonElement orderButton = new ButtonElement(orderButtonLocator);
-        orderButton.click();
+        ButtonElement element = new ButtonElement(orderButtonLocator);
+        element.click();
     }
 
+    public void LoginIntoAccountButtonClick() {
+        ButtonElement element = new ButtonElement(orderButtonLocator);
+        element.click();
+
+    }
 
 
 }
