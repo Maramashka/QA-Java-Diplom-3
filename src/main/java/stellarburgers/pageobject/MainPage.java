@@ -7,11 +7,11 @@ import static stellarburgers.pageobject.Constants.MAIN_PAGE;
 
 public class MainPage {
     WebDriver driver;
-    MainPage mainPage = new MainPage();
+    MainPage mainPage;
 
-    private String profileButtonLocator = ".//*[text()='Личный Кабинет']";
-    private String orderButtonLocator = ".//button[text()='Оформить заказ']";
-    private String loginIntoAccountButtonLocator = ".//button[@text()='Войти в аккаунт']";
+    private String accountButton = ".//*[text()='Личный Кабинет']";
+    private String loginIntoAccountButton = ".//button[@text()='Войти в аккаунт']";
+    private String setOrderButton = ".//button[text()='Оформить заказ']";
 
     public MainPage() {
     }
@@ -25,21 +25,20 @@ public class MainPage {
         return this;
     }
 
-    public void profileButtonClick() {
-        ButtonElement element = new ButtonElement(profileButtonLocator);
-        element.click();
-    }
-
-    public void orderButtonClick() {
-        mainPage.openMainPage();
-        ButtonElement element = new ButtonElement(orderButtonLocator);
+    public void accountButtonClick() {
+        ButtonElement element = new ButtonElement(accountButton);
         element.click();
     }
 
     public void LoginIntoAccountButtonClick() {
-        ButtonElement element = new ButtonElement(orderButtonLocator);
+        ButtonElement element = new ButtonElement(loginIntoAccountButton);
         element.click();
+    }
 
+    public void setOrderButtonClick() {
+        mainPage.openMainPage();
+        ButtonElement element = new ButtonElement(setOrderButton);
+        element.click();
     }
 
 

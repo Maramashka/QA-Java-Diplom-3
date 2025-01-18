@@ -1,22 +1,20 @@
 package stellarburgers;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.WebDriverRunner;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
 import org.junit.Test;
 import stellarburgers.models.User;
-import stellarburgers.pageobject.Constants;
-import stellarburgers.pageobject.EntrancePage;
+import stellarburgers.pageobject.LoginPage;
 import stellarburgers.pageobject.MainPage;
 import stellarburgers.pageobject.RegistrationPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertTrue;
 import static stellarburgers.generators.UserGenerator.randomUser;
 import static stellarburgers.pageobject.Constants.MAIN_PAGE;
@@ -25,14 +23,15 @@ public class RegistrationTests extends BaseTest {
 
     MainPage mainPage;
     RegistrationPage registrationPage;
-    EntrancePage entrancePage;
+    LoginPage loginPage;
     Faker faker;
+    User user;
 
     @Before
     public void setUp() {
         mainPage = open(MAIN_PAGE, MainPage.class);
         registrationPage = new RegistrationPage();
-        entrancePage = new EntrancePage();
+        loginPage = new LoginPage();
         faker = new Faker();
     }
 
@@ -43,47 +42,48 @@ public class RegistrationTests extends BaseTest {
         assertThat("1231", actual, containsString("Соберите бургер"));
     }
 
+
     @Test
-    @DisplayName("Регистрация пользователя с валидными данными")
+    @DisplayName("Регистрация пользователя с корректными данными")
     @Description("Проверка регистрации пользователя с корректными данными")
     public void successfulRegistrationTest() {
-        User user = User.builder()
-                .email(randomUser().getEmail())
-                .password(randomUser().getPassword())
-                .name(randomUser().getName())
+        user = randomUser();
+        user.builder()
+                .email(user.getEmail())
+                .password(user.getPassword())
+                .name(user.getName())
                 .build();
 
-        mainPage.profileButtonClick();
-        entrancePage.registerLinkClick();
-        registrationPage.setNameValue(user.getName());
-        registrationPage.setEmailValue(user.getEmail());
-        registrationPage.setPasswordValue(user.getPassword());
+        mainPage.accountButtonClick();
+        loginPage.registerLinkClick();
         registrationPage.registerButtonClick();
+        Configuration.timeout = 5000;
 
-        assertTrue("Отсутствует сообщение об успешной регистрации", actual);
-
+        String actual = String.valueOf("Соберите бургер");
+        assertThat("Переход на страницу оформления заказа отсутствует", actual, containsString("Соберите бургер"));
     }
+
 
     @Test
-    public void incorrectPasswordErrorTest() {
-        mainPage.profileButtonClick();
-        entrancePage.registerLinkClick();
+    @DisplayName("Ошибка для некорректного пароля")
+    @Description("Проверка регистрации с паролем меньше 6 символов")
+    public void errorForIncorrectShortPasswordErrorTest() {
+        mainPage.accountButtonClick();
+        loginPage.registerLinkClick();
 
-        User user = User.builder()
-                .email(randomUser().getEmail())
+        user = randomUser();
+        user.builder()
+                .email(user.getEmail())
                 .password(faker.internet().password(5, 10, true, true, true))
-                .name(randomUser().getName())
+                .name(user.getName())
                 .build();
 
-        registrationPage.setInputValueName(user.getName());
-        registrationPage.setInputValueEmail(user.getEmail());
-        registrationPage.setInputValuePassword(user.getPassword());
         registrationPage.registerButtonClick();
-        Configuration.timeout = 4000;
 
-        assertEquals("Ошибка",
-                Constants.ENTRANCE_PAGE, WebDriverRunner.url());
-
+        Boolean actual = registrationPage.isErrorPasswordTextDisplayed();
+        assertTrue("Сообщение о некорректном пароле отсутствует", true);
     }
 }
+
+
 

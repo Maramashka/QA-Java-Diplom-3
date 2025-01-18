@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="My beginning">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/client/Spec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/models/UserCreds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/EntrancePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" afterDir="false" />
+    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="O My God">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/MessageElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/generators/UserGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/generators/UserGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/EntrancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/UserTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +41,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest.executor": "Run",
+    "JUnit.RegistrationTests.executor": "Run",
     "JUnit.RegistrationTests.incorrectPasswordErrorTest.executor": "Run",
     "JUnit.RegistrationTests.successfulRegistrationTest.executor": "Run",
+    "JUnit.RegistrationTests.test2Test.executor": "Debug",
+    "JUnit.RegistrationTests.testTest.executor": "Run",
     "JUnit.TestAccount.checkAccountButtonTest.executor": "Run",
     "JUnit.TestAccount.checkOrderButtonTest.executor": "Run",
     "JUnit.TestAccount.checkProfileButtonTest.executor": "Run",
@@ -71,8 +68,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.RegistrationTests.successfulRegistrationTest">
-    <configuration name="RegistrationTests.incorrectPasswordErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RegistrationTests">
+    <configuration name="RegistrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -82,13 +79,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="incorrectPasswordErrorTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTests.profileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTests.errorForIncorrectShortPasswordErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -98,23 +94,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="profileTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTests.registrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="registrationTest" />
+      <option name="METHOD_NAME" value="errorForIncorrectShortPasswordErrorTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTests.urlTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTests.test2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +126,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="urlTest" />
+      <option name="METHOD_NAME" value="test2Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTests.testTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
+      <option name="METHOD_NAME" value="testTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,19 +173,19 @@
     <list>
       <item itemvalue="JUnit.test Chrome" />
       <item itemvalue="JUnit.test Yandex" />
-      <item itemvalue="JUnit.RegistrationTests.incorrectPasswordErrorTest" />
-      <item itemvalue="JUnit.RegistrationTests.profileTest" />
-      <item itemvalue="JUnit.RegistrationTests.registrationTest" />
+      <item itemvalue="JUnit.RegistrationTests" />
+      <item itemvalue="JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest" />
       <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
-      <item itemvalue="JUnit.RegistrationTests.urlTest" />
+      <item itemvalue="JUnit.RegistrationTests.test2Test" />
+      <item itemvalue="JUnit.RegistrationTests.testTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RegistrationTests" />
+        <item itemvalue="JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest" />
         <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
-        <item itemvalue="JUnit.RegistrationTests.incorrectPasswordErrorTest" />
-        <item itemvalue="JUnit.RegistrationTests.registrationTest" />
-        <item itemvalue="JUnit.RegistrationTests.profileTest" />
-        <item itemvalue="JUnit.RegistrationTests.urlTest" />
+        <item itemvalue="JUnit.RegistrationTests.test2Test" />
+        <item itemvalue="JUnit.RegistrationTests.testTest" />
       </list>
     </recent_temporary>
   </component>
@@ -218,12 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1737052433361</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="O My God">
+      <option name="closed" value="true" />
+      <created>1737134690607</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737134690607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="My beginning" />
-    <option name="LAST_COMMIT_MESSAGE" value="My beginning" />
+    <MESSAGE value="O My God" />
+    <option name="LAST_COMMIT_MESSAGE" value="O My God" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

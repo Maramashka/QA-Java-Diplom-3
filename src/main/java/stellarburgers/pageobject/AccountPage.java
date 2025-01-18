@@ -3,7 +3,7 @@ package stellarburgers.pageobject;
 import org.openqa.selenium.WebDriver;
 import stellarburgers.elements.ButtonElement;
 
-public class ProfilePage {
+public class AccountPage {
     WebDriver driver;
 
     private String emailLocator = ".//input[text()='Логин']";
@@ -12,13 +12,12 @@ public class ProfilePage {
     private String saveButtonLocator = ".//button[text()='Сохранить']";
 
 
-    public ProfilePage() {
+    public AccountPage() {
     }
 
-    public ProfilePage(WebDriver driver) {
+    public AccountPage(WebDriver driver) {
         this.driver = driver;
     }
-
 
     public void saveButtonClick() {
         ButtonElement saveButton = new ButtonElement(saveButtonLocator);

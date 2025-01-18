@@ -10,14 +10,10 @@ import static com.codeborne.selenide.Selenide.$;
 public class ButtonElement {
     SelenideElement buttonElement;
 
-    // В элемент в конструкторе передаём локатор и внутри конструктора мы по этому локатору делаем ByXPath
-    // в данном случае мы элемент можем искать только по XPath
     public ButtonElement(String locator) {
         buttonElement = $(new By.ByXPath(locator));
-    }
 
-    // а можем вместо локатора передать By
-    // или Сss, или name, или class - конструктор можно написать для чего угодно
+    }
     public ButtonElement(By locator) {
         buttonElement = $(locator);
     }
@@ -34,6 +30,9 @@ public class ButtonElement {
         buttonElement = (SelenideElement) element;
     }
 
+    public boolean isEnabled() {
+        return buttonElement.isEnabled();
+    }
 
     public void click() {
         buttonElement.shouldBe(enabled);
@@ -41,13 +40,11 @@ public class ButtonElement {
         buttonElement.click();
     }
 
-    public void scrollAndClickButton() {
+    public void scrollAndClick() {
         buttonElement.shouldBe(enabled);
         buttonElement.scrollIntoView(true);
         buttonElement.click();
     }
 
-    public boolean isEnabledButton() {
-        return buttonElement.isEnabled();
-    }
+
 }
