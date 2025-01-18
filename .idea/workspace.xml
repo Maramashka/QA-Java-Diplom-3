@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="O My God">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/MessageElement.java" afterDir="false" />
+    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="Next Attempt">
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoverPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/EntrancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +41,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.LoginTests.LoginTest.executor": "Run",
+    "JUnit.LoginTests.accountButtonLoginTest.executor": "Run",
+    "JUnit.LoginTests.loginIntoAccountButtonLoginTest.executor": "Run",
+    "JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest.executor": "Run",
     "JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest.executor": "Run",
     "JUnit.RegistrationTests.executor": "Run",
     "JUnit.RegistrationTests.incorrectPasswordErrorTest.executor": "Run",
@@ -68,8 +72,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.RegistrationTests">
-    <configuration name="RegistrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LoginTests.LoginTest">
+    <configuration name="LoginTests.LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -78,8 +82,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
+      <option name="METHOD_NAME" value="LoginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.loginIntoAccountButtonLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
+      <option name="METHOD_NAME" value="loginIntoAccountButtonLoginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
+      <option name="METHOD_NAME" value="loginIntoButtonLoginRegistrationPageLoginTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,38 +153,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTests.test2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="test2Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTests.testTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="testTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test Chrome" type="JUnit" factoryName="JUnit">
       <module name="QA-Java-Diplom-3" />
       <option name="PACKAGE_NAME" value="stellarburgers" />
@@ -173,19 +178,19 @@
     <list>
       <item itemvalue="JUnit.test Chrome" />
       <item itemvalue="JUnit.test Yandex" />
-      <item itemvalue="JUnit.RegistrationTests" />
+      <item itemvalue="JUnit.LoginTests.LoginTest" />
+      <item itemvalue="JUnit.LoginTests.loginIntoAccountButtonLoginTest" />
+      <item itemvalue="JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" />
       <item itemvalue="JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest" />
       <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
-      <item itemvalue="JUnit.RegistrationTests.test2Test" />
-      <item itemvalue="JUnit.RegistrationTests.testTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RegistrationTests" />
+        <item itemvalue="JUnit.LoginTests.LoginTest" />
+        <item itemvalue="JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" />
         <item itemvalue="JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest" />
         <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
-        <item itemvalue="JUnit.RegistrationTests.test2Test" />
-        <item itemvalue="JUnit.RegistrationTests.testTest" />
+        <item itemvalue="JUnit.LoginTests.loginIntoAccountButtonLoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -222,13 +227,22 @@
       <option name="project" value="LOCAL" />
       <updated>1737134690607</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Next Attempt">
+      <option name="closed" value="true" />
+      <created>1737201560935</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737201560935</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="My beginning" />
     <MESSAGE value="O My God" />
-    <option name="LAST_COMMIT_MESSAGE" value="O My God" />
+    <MESSAGE value="Next Attempt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next Attempt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

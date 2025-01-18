@@ -14,6 +14,7 @@ public class RegistrationPage {
     private String inputNameLocator = "//input[@class='text input__textfield text_type_main-default'][1]";
     private String buttonRegisterLocator = ".//button[text()='Зарегистрироваться']";
     private String incorrectPassword = "//p[text()='Некорректный пароль']";
+    private String buttonLogin = "//a[text()='Войти']";
 
 
     public RegistrationPage() {
@@ -24,17 +25,17 @@ public class RegistrationPage {
     }
 
 
-    public void setEmail(String email) {
+    public void setEmailValue(String email) {
         InputElement element = new InputElement(inputEmailLocator);
         element.setValue(email);
     }
 
-    public void setPassword(String password) {
+    public void setPasswordValue(String password) {
         InputElement element = new InputElement(inputPasswordLocator);
         element.setValue(password);
     }
 
-    public void setName(String name) {
+    public void setNameValue(String name) {
         InputElement element = new InputElement(inputNameLocator);
         element.setValue(name);
     }
@@ -45,16 +46,19 @@ public class RegistrationPage {
     }
 
     public boolean isErrorPasswordTextDisplayed() {
-        MessageElement messageElement = new MessageElement(incorrectPassword);
-        messageElement.isDisplayed();
+        MessageElement element = new MessageElement(incorrectPassword);
+        element.isDisplayed();
         return true;
     }
 
     public String getErrorPasswordText() {
-        MessageElement messageElement = new MessageElement(incorrectPassword);
-        messageElement.isDisplayed();
-        return messageElement.getText();
+        MessageElement element = new MessageElement(incorrectPassword);
+        element.isDisplayed();
+        return element.getText();
     }
 
-
+    public void buttonLoginClick() {
+        ButtonElement element = new ButtonElement(buttonLogin);
+        element.click();
+    }
 }

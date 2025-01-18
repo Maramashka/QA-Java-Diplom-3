@@ -14,7 +14,6 @@ import stellarburgers.pageobject.RegistrationPage;
 import static com.codeborne.selenide.Selenide.open;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertTrue;
 import static stellarburgers.generators.UserGenerator.randomUser;
 import static stellarburgers.pageobject.Constants.MAIN_PAGE;
@@ -33,13 +32,7 @@ public class RegistrationTests extends BaseTest {
         registrationPage = new RegistrationPage();
         loginPage = new LoginPage();
         faker = new Faker();
-    }
-
-
-    @Test
-    public void testTest() {
-        String actual = String.valueOf("Соберите бургер");
-        assertThat("1231", actual, containsString("Соберите бургер"));
+        user = randomUser();
     }
 
 
@@ -47,15 +40,12 @@ public class RegistrationTests extends BaseTest {
     @DisplayName("Регистрация пользователя с корректными данными")
     @Description("Проверка регистрации пользователя с корректными данными")
     public void successfulRegistrationTest() {
-        user = randomUser();
-        user.builder()
-                .email(user.getEmail())
-                .password(user.getPassword())
-                .name(user.getName())
-                .build();
-
         mainPage.accountButtonClick();
         loginPage.registerLinkClick();
+
+        registrationPage.setNameValue(user.getName());
+        registrationPage.setEmailValue(user.getEmail());
+        registrationPage.setPasswordValue(user.getPassword());
         registrationPage.registerButtonClick();
         Configuration.timeout = 5000;
 
@@ -71,12 +61,10 @@ public class RegistrationTests extends BaseTest {
         mainPage.accountButtonClick();
         loginPage.registerLinkClick();
 
-        user = randomUser();
-        user.builder()
-                .email(user.getEmail())
-                .password(faker.internet().password(5, 10, true, true, true))
-                .name(user.getName())
-                .build();
+        registrationPage.setNameValue(user.getName());
+        registrationPage.setEmailValue(user.getEmail());
+        registrationPage.setPasswordValue(faker.
+                internet().password(5, 10, true, true, true));
 
         registrationPage.registerButtonClick();
 

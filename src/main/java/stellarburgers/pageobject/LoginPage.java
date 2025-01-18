@@ -8,10 +8,11 @@ import stellarburgers.elements.LinkElement;
 public class LoginPage {
     WebDriver driver;
 
-    private String inputEmail = ".//input[type()='text']";
-    private String inputPassword = ".//input[type()='password']";
-    private String buttonEntrance = ".//button[text()='Войти']";
+    private String inputEmail = ".//input[@name='name']";
+    private String inputPassword = ".//input[@name='Пароль']";
+    private String buttonLogin = ".//button[text()='Войти']";
     private String linkRegister = ".//a[text()='Зарегистрироваться']";
+    private String linkPasswordRecover = ".//a[text()='Восстановить пароль']";
 
 
     public LoginPage() {
@@ -23,7 +24,7 @@ public class LoginPage {
 
     public void registerLinkClick() {
         LinkElement link = new LinkElement(linkRegister);
-        link.clickLink();
+        link.click();
     }
 
     public void setEmail(String email) {
@@ -36,8 +37,13 @@ public class LoginPage {
         element.setValue(password);
     }
 
-    public void buttonEntranceClick() {
-        ButtonElement element = new ButtonElement(buttonEntrance);
+    public void buttonLoginClick() {
+        ButtonElement element = new ButtonElement(buttonLogin);
+        element.click();
+    }
+
+    public void linkPasswordRecoverClick() {
+        LinkElement element = new LinkElement(linkPasswordRecover);
         element.click();
     }
 

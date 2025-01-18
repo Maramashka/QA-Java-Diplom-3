@@ -13,15 +13,16 @@ public class LinkElement {
         linkElement = $(new By.ByXPath(locator));
     }
 
-    public void clickLink(){
-        linkElement.scrollIntoView(false); // скролл --> ожидание, что доступна --> клик
+    public void click(){
+        linkElement.scrollIntoView(false);
         linkElement.shouldBe(enabled);
         linkElement.click();
     }
 
-    public String getLinkText(){
-        linkElement.shouldBe(enabled); // ожиданием, что доступна --> получаем текст --> возвращаем текст
+    public String getText(){
+        linkElement.shouldBe(enabled);
         String linkText = linkElement.getText();
         return linkText;
     }
+
 }

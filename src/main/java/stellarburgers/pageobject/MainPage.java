@@ -10,7 +10,7 @@ public class MainPage {
     MainPage mainPage;
 
     private String accountButton = ".//*[text()='Личный Кабинет']";
-    private String loginIntoAccountButton = ".//button[@text()='Войти в аккаунт']";
+    private String loginIntoAccountButton = ".//button[text()='Войти в аккаунт']";
     private String setOrderButton = ".//button[text()='Оформить заказ']";
 
     public MainPage() {
@@ -30,7 +30,7 @@ public class MainPage {
         element.click();
     }
 
-    public void LoginIntoAccountButtonClick() {
+    public void loginIntoAccountButtonClick() {
         ButtonElement element = new ButtonElement(loginIntoAccountButton);
         element.click();
     }
