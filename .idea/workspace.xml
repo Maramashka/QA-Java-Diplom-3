@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="Next Attempt">
-      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoverPage.java" afterDir="false" />
+    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="ooooo.....">
+      <change afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/ClickThroughTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoverPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoveryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" afterDir="false" />
@@ -41,10 +43,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.ClickThroughTests.clickThroughExitButtonFromAccountPageTest.executor": "Run",
+    "JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest.executor": "Run",
+    "JUnit.ClickThroughTests.clickThroughPersonalAccountButtonWithoutAuthorizationTest.executor": "Debug",
+    "JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest.executor": "Run",
     "JUnit.LoginTests.LoginTest.executor": "Run",
     "JUnit.LoginTests.accountButtonLoginTest.executor": "Run",
     "JUnit.LoginTests.loginIntoAccountButtonLoginTest.executor": "Run",
     "JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest.executor": "Run",
+    "JUnit.LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest.executor": "Run",
     "JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest.executor": "Run",
     "JUnit.RegistrationTests.executor": "Run",
     "JUnit.RegistrationTests.incorrectPasswordErrorTest.executor": "Run",
@@ -72,8 +79,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.LoginTests.LoginTest">
-    <configuration name="LoginTests.LoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest">
+    <configuration name="ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -82,14 +89,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
-      <option name="METHOD_NAME" value="LoginTest" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
+      <option name="METHOD_NAME" value="clickThroughPersonalAccountButtonAfterAuthorizationTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.loginIntoAccountButtonLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
+      <option name="METHOD_NAME" value="clickThroughСonstructionButtonFromAccountPageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.accountButtonLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -99,7 +122,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
-      <option name="METHOD_NAME" value="loginIntoAccountButtonLoginTest" />
+      <option name="METHOD_NAME" value="accountButtonLoginTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,7 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTests.errorForIncorrectShortPasswordErrorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -130,24 +153,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="errorForIncorrectShortPasswordErrorTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTests.successfulRegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="successfulRegistrationTest" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
+      <option name="METHOD_NAME" value="loginIntoLinkLoginPasswordRecoveryPageTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -178,19 +185,19 @@
     <list>
       <item itemvalue="JUnit.test Chrome" />
       <item itemvalue="JUnit.test Yandex" />
-      <item itemvalue="JUnit.LoginTests.LoginTest" />
-      <item itemvalue="JUnit.LoginTests.loginIntoAccountButtonLoginTest" />
+      <item itemvalue="JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" />
+      <item itemvalue="JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest" />
+      <item itemvalue="JUnit.LoginTests.accountButtonLoginTest" />
       <item itemvalue="JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" />
-      <item itemvalue="JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest" />
-      <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
+      <item itemvalue="JUnit.LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoginTests.LoginTest" />
+        <item itemvalue="JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest" />
+        <item itemvalue="JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" />
+        <item itemvalue="JUnit.LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest" />
         <item itemvalue="JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" />
-        <item itemvalue="JUnit.RegistrationTests.errorForIncorrectShortPasswordErrorTest" />
-        <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
-        <item itemvalue="JUnit.LoginTests.loginIntoAccountButtonLoginTest" />
+        <item itemvalue="JUnit.LoginTests.accountButtonLoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -235,14 +242,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737201560935</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ooooo.....">
+      <option name="closed" value="true" />
+      <created>1737210128798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737210128798</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="My beginning" />
     <MESSAGE value="O My God" />
     <MESSAGE value="Next Attempt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Next Attempt" />
+    <MESSAGE value="ooooo....." />
+    <option name="LAST_COMMIT_MESSAGE" value="ooooo....." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

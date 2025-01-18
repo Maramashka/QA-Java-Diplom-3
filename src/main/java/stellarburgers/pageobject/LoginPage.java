@@ -22,29 +22,34 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public void registerLinkClick() {
+    public LoginPage registerLinkClick() {
         LinkElement link = new LinkElement(linkRegister);
         link.click();
+        return this;
     }
 
-    public void setEmail(String email) {
+    public LoginPage setEmail(String email) {
         InputElement element = new InputElement(inputEmail);
         element.setValue(email);
+        return this;
     }
 
-    public void setPassword(String password) {
+    public LoginPage setPassword(String password) {
         InputElement element = new InputElement(inputPassword);
         element.setValue(password);
+        return this;
     }
 
-    public void buttonLoginClick() {
+    public LoginPage buttonLoginClick() {
         ButtonElement element = new ButtonElement(buttonLogin);
         element.click();
+        return this;
     }
 
-    public void linkPasswordRecoverClick() {
+    public LoginPage linkPasswordRecoverClick() {
         LinkElement element = new LinkElement(linkPasswordRecover);
         element.click();
+        return this;
     }
 
 }

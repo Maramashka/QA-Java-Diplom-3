@@ -8,12 +8,11 @@ import stellarburgers.client.UserClient;
 import stellarburgers.models.User;
 import stellarburgers.pageobject.LoginPage;
 import stellarburgers.pageobject.MainPage;
-import stellarburgers.pageobject.PasswordRecoverPage;
+import stellarburgers.pageobject.PasswordRecoveryPage;
 import stellarburgers.pageobject.RegistrationPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.webdriver;
-import static com.codeborne.selenide.WebDriverRunner.url;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static stellarburgers.generators.UserGenerator.randomUser;
@@ -24,7 +23,7 @@ public class LoginTests extends BaseTest {
     LoginPage loginPage;
     User user;
     RegistrationPage registrationPage;
-    PasswordRecoverPage passwordRecoverPage;
+    PasswordRecoveryPage passwordRecoveryPage;
 
     @Before
     public void setUp() {
@@ -34,66 +33,70 @@ public class LoginTests extends BaseTest {
         UserClient userClient = new UserClient();
         userClient.create(user);
         registrationPage = new RegistrationPage();
-        passwordRecoverPage = new PasswordRecoverPage();
+        passwordRecoveryPage = new PasswordRecoveryPage();
     }
 
     @Test
-    @DisplayName("Вход по кнопке «Войти в аккаунт» на главной")
-    @Description("Вход по кнопке «Войти в аккаунт» на главной странице")
+    @DisplayName("Авторизация через кнопку «Войти в аккаунт» на главной")
+    @Description("Авторизация через кнопку «Войти в аккаунт» на главной странице")
     public void loginIntoAccountButtonLoginTest() {
         mainPage.loginIntoAccountButtonClick();
         loginPage.setEmail(user.getEmail());
         loginPage.setPassword(user.getPassword());
         loginPage.buttonLoginClick();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
-        assertThat("Переход на страницу оформления заказа", actualUrl, is(url()));
+        String actualUrl = webdriver().driver().url();
+
+        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
     }
 
     @Test
-    @DisplayName("Вход через кнопку «Личный кабинет»")
-    @Description("Вход в аккаунт через кнопку «Личный кабинет»")
+    @DisplayName("Авторизация через кнопку «Личный кабинет»")
+    @Description("Авторизация через кнопку «Личный кабинет»")
     public void accountButtonLoginTest() {
-        mainPage.accountButtonClick();
-        loginPage.buttonLoginClick();
-        loginPage.setEmail(user.getEmail());
-        loginPage.setPassword(user.getPassword());
+        mainPage.personalAccountButtonClick();
+        loginPage
+                .setEmail(user.getEmail())
+                .setPassword(user.getPassword())
+                .buttonLoginClick();
 
         String actualUrl = webdriver().driver().getCurrentFrameUrl();
 
-        assertThat("Переход на страницу оформления заказа", actualUrl, is(url()));
+        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
     }
 
     @Test
-    @DisplayName("Вход через ссылку «Войти» на странице регистрации")
-    @Description("Вход в аккаунт через ссылку «Войти» на странице регистрации")
+    @DisplayName("Авторизация через ссылку «Войти» в форме регистрации")
+    @Description("Авторизация через ссылку «Войти» в форме регистрации")
     public void loginIntoButtonLoginRegistrationPageLoginTest() {
-        mainPage.accountButtonClick();
+        mainPage.personalAccountButtonClick();
         loginPage.registerLinkClick();
         registrationPage.buttonLoginClick();
-        loginPage.setEmail(user.getEmail());
-        loginPage.setPassword(user.getPassword());
-        loginPage.buttonLoginClick();
+        loginPage
+                .setEmail(user.getEmail())
+                .setPassword(user.getPassword())
+                .buttonLoginClick();
 
         String actualUrl = webdriver().driver().getCurrentFrameUrl();
 
-        assertThat("Переход на страницу оформления заказа", actualUrl, is(url()));
+        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
     }
 
     @Test
-    @DisplayName("Вход через ссылку «Войти» на странице регистрации")
-    @Description("Вход в аккаунт через кнопку в форме восстановления пароля")
-    public void LoginTest() {
-        mainPage.accountButtonClick();
-        loginPage.buttonLoginClick();
-        loginPage.linkPasswordRecoverClick();
-        passwordRecoverPage.linkPasswordRecoverClick();
-        loginPage.setEmail(user.getEmail());
-        loginPage.setPassword(user.getPassword());
-        loginPage.buttonLoginClick();
+    @DisplayName("Авторизация через ссылку «Войти» на странице восстановления пароля")
+    @Description("Авторизация через ссылку «Войти» на странице восстановления пароля")
+    public void loginIntoLinkLoginPasswordRecoveryPageTest() {
+        mainPage.personalAccountButtonClick();
+        loginPage.buttonLoginClick()
+                .linkPasswordRecoverClick();
+        passwordRecoveryPage.linkPasswordRecoverClick();
+        loginPage
+                .setEmail(user.getEmail())
+                .setPassword(user.getPassword())
+                .buttonLoginClick();
 
         String actualUrl = webdriver().driver().getCurrentFrameUrl();
 
-        assertThat("Переход на страницу оформления заказа", actualUrl, is(url()));
+        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
     }
 }

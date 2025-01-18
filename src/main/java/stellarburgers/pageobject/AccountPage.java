@@ -10,6 +10,7 @@ public class AccountPage {
     private String passwordLocator = ".//input[text()='Пароль']";
     private String nameLocator = ".//input[text()='Имя']";
     private String saveButtonLocator = ".//button[text()='Сохранить']";
+    private String exitButton = ".//button[contains(@type,'button') and text()='Выход']";
 
 
     public AccountPage() {
@@ -20,8 +21,15 @@ public class AccountPage {
     }
 
     public void saveButtonClick() {
-        ButtonElement saveButton = new ButtonElement(saveButtonLocator);
-        saveButton.click();
+        ButtonElement element = new ButtonElement(saveButtonLocator);
+        element.click();
     }
+
+
+    public void exitButtonClick() {
+        ButtonElement element = new ButtonElement(exitButton);
+        element.click();
+    }
+
 
 }

@@ -3,12 +3,12 @@ package stellarburgers.pageobject;
 import org.openqa.selenium.WebDriver;
 import stellarburgers.elements.LinkElement;
 
-public class PasswordRecoverPage {
+public class PasswordRecoveryPage {
     WebDriver driver;
 
     private String linkLogin = ".//a[text()='Войти']";
 
-    public PasswordRecoverPage() {
+    public PasswordRecoveryPage() {
     }
 
     public void linkPasswordRecoverClick() {
