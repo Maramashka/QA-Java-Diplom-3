@@ -52,7 +52,7 @@ public class ClickThroughTests extends BaseTest {
         userClient.login(user);
         mainPage.personalAccountButtonClick();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
+        String actualUrl = webdriver().driver().url();
         assertEquals("Ожидаем перехода в личный кабинет", ACCOUNT_PAGE, actualUrl);
     }
 
@@ -68,9 +68,26 @@ public class ClickThroughTests extends BaseTest {
         mainPage.personalAccountButtonClick()
                 .buttonConstructionClick();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
+        String actualUrl = webdriver().driver().url();
         assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
     }
+
+    @Test
+    @DisplayName("Click-Through Logo From Account Page Test")
+    @Description("Переход на лого из личного кабинета")
+    public void clickThroughLogoFromAccountPageTest() {
+        user = randomUser();
+        UserClient userClient = new UserClient();
+        userClient.create(user);
+        userClient.login(user);
+        mainPage.personalAccountButtonClick()
+                .logoClick();
+
+        String actualUrl = webdriver().driver().url();
+        assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
+    }
+
+
 
     @Test
     @DisplayName("click Through Exit Button From Account Page Test")
@@ -84,7 +101,7 @@ public class ClickThroughTests extends BaseTest {
         accountPage.exitButtonClick();
         Configuration.timeout = 4000;
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
+        String actualUrl = webdriver().driver().url();
         assertEquals("Ожидаем перехода на страницу авторизации", LOGIN_PAGE, actualUrl);
     }
 }
