@@ -10,7 +10,9 @@ import stellarburgers.models.User;
 import java.io.IOException;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.Selenide.open;
 import static stellarburgers.browser.Browser.initDriver;
+import static stellarburgers.pageobject.Constants.BASE_URI;
 
 public class BaseTest {
     User user;
@@ -20,6 +22,7 @@ public class BaseTest {
     @Before
     public void setup() throws IOException {
         initDriver();
+        Configuration.baseUrl = BASE_URI;
         Configuration.timeout = 4000;
     }
 

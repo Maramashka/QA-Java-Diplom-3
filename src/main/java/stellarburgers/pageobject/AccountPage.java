@@ -10,8 +10,7 @@ public class AccountPage {
     private String passwordLocator = ".//input[text()='Пароль']";
     private String nameLocator = ".//input[text()='Имя']";
     private String saveButtonLocator = ".//button[text()='Сохранить']";
-    private String exitButton = ".//button[contains(@type,'button') and text()='Выход']";
-
+    private String exitButton = ".//button[text()='Выход']";
 
     public AccountPage() {
     }

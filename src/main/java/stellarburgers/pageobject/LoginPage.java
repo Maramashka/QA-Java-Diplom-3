@@ -23,8 +23,8 @@ public class LoginPage {
     }
 
     public LoginPage registerLinkClick() {
-        LinkElement link = new LinkElement(linkRegister);
-        link.click();
+        LinkElement element = new LinkElement(linkRegister);
+        element.click();
         return this;
     }
 
@@ -46,10 +46,9 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage linkPasswordRecoverClick() {
+    public void linkPasswordRecoverClick() {
         LinkElement element = new LinkElement(linkPasswordRecover);
         element.click();
-        return this;
     }
 
 }

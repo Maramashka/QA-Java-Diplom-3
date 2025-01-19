@@ -1,5 +1,6 @@
 package stellarburgers;
 
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
@@ -10,9 +11,6 @@ import stellarburgers.pageobject.*;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.webdriver;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertEquals;
 import static stellarburgers.generators.UserGenerator.randomUser;
 import static stellarburgers.pageobject.Constants.*;
@@ -36,7 +34,7 @@ public class ClickThroughTests extends BaseTest {
 
     @Test
     @DisplayName("Click-Through Personal Account Button Without Authorization Test")
-    @Description("Переход по клику на кнопку «Личный кабинет» для неавторизованного пользователя")
+    @Description("Переход по клику на кнопку 'Личный кабинет' для неавторизованного пользователя")
     public void clickThroughPersonalAccountButtonWithoutAuthorizationTest() {
         mainPage.personalAccountButtonClick();
         String actualUrl = webdriver().driver().url();
@@ -46,7 +44,7 @@ public class ClickThroughTests extends BaseTest {
 
     @Test
     @DisplayName("Click-Through Personal Account Button After Authorization Test")
-    @Description("Переход по клику на кнопку «Личный кабинет» для авторизованного пользователя")
+    @Description("Переход по клику на кнопку 'Личный кабинет' для авторизованного пользователя")
     public void clickThroughPersonalAccountButtonAfterAuthorizationTest() {
         user = randomUser();
         UserClient userClient = new UserClient();
@@ -55,14 +53,13 @@ public class ClickThroughTests extends BaseTest {
         mainPage.personalAccountButtonClick();
 
         String actualUrl = webdriver().driver().getCurrentFrameUrl();
-
         assertEquals("Ожидаем перехода в личный кабинет", ACCOUNT_PAGE, actualUrl);
     }
 
 
     @Test
     @DisplayName("Click-Through Сonstruction From Account Page Test")
-    @Description("Переход по клику на «Конструктор» из личного кабинета")
+    @Description("Переход по клику на 'Конструктор' из личного кабинета")
     public void clickThroughСonstructionButtonFromAccountPageTest() {
         user = randomUser();
         UserClient userClient = new UserClient();
@@ -71,14 +68,13 @@ public class ClickThroughTests extends BaseTest {
         mainPage.personalAccountButtonClick()
                 .buttonConstructionClick();
 
-        String actual = String.valueOf("Соберите бургер");
-
-        assertThat("Ожидаем перехода на главную страницу", actual, containsString("Соберите бургер"));
+        String actualUrl = webdriver().driver().getCurrentFrameUrl();
+        assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
     }
 
     @Test
     @DisplayName("click Through Exit Button From Account Page Test")
-    @Description("Выход из аккаунта по клику на «Выход» из личного кабинета")
+    @Description("Выход из аккаунта по клику на 'Выход' из личного кабинета")
     public void clickThroughExitButtonFromAccountPageTest() {
         user = randomUser();
         UserClient userClient = new UserClient();
@@ -86,9 +82,9 @@ public class ClickThroughTests extends BaseTest {
         userClient.login(user);
         mainPage.personalAccountButtonClick();
         accountPage.exitButtonClick();
+        Configuration.timeout = 4000;
 
         String actualUrl = webdriver().driver().getCurrentFrameUrl();
-
-        assertThat("Ожидаем перехода на страницу авторизации", actualUrl, is((LOGIN_PAGE)));
+        assertEquals("Ожидаем перехода на страницу авторизации", LOGIN_PAGE, actualUrl);
     }
 }

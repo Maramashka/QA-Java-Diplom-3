@@ -11,13 +11,8 @@ import stellarburgers.pageobject.MainPage;
 import stellarburgers.pageobject.RegistrationPage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.webdriver;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static stellarburgers.generators.UserGenerator.randomUser;
-import static stellarburgers.pageobject.Constants.LOGIN_PAGE;
 import static stellarburgers.pageobject.Constants.MAIN_PAGE;
 
 public class RegistrationTests extends BaseTest {
@@ -51,11 +46,14 @@ public class RegistrationTests extends BaseTest {
                 .setPasswordValue(user.getPassword())
                 .registerButtonClick();
 
-//        String actual = String.valueOf("Соберите бургер");
-//        assertThat("Ожидаем перехода на главную страницу", actual, containsString("Соберите бургер"));
-        String actualUrl = webdriver().driver().url();
+        loginPage
+                .setEmail(user.getEmail())
+                .setPassword(user.getPassword())
+                .buttonLoginClick();
 
-        assertEquals("Ожидаем перехода на страницу входа в аккаунт", LOGIN_PAGE, actualUrl);
+        boolean actual = mainPage.isOrderButtonEnabled();
+        assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
+                actual);
     }
 
 

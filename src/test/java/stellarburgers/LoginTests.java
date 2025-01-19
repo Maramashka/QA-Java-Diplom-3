@@ -12,9 +12,7 @@ import stellarburgers.pageobject.PasswordRecoveryPage;
 import stellarburgers.pageobject.RegistrationPage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.webdriver;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertTrue;
 import static stellarburgers.generators.UserGenerator.randomUser;
 import static stellarburgers.pageobject.Constants.MAIN_PAGE;
 
@@ -37,22 +35,23 @@ public class LoginTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("Авторизация через кнопку «Войти в аккаунт» на главной")
-    @Description("Авторизация через кнопку «Войти в аккаунт» на главной странице")
+    @DisplayName("Авторизация через кнопку 'Войти в аккаунт' на главной")
+    @Description("Авторизация через кнопку 'Войти в аккаунт' на главной странице")
     public void loginIntoAccountButtonLoginTest() {
         mainPage.loginIntoAccountButtonClick();
         loginPage.setEmail(user.getEmail());
         loginPage.setPassword(user.getPassword());
         loginPage.buttonLoginClick();
 
-        String actualUrl = webdriver().driver().url();
+        boolean actual = mainPage.isOrderButtonEnabled();
+        assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
+                actual);
 
-        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
     }
 
     @Test
-    @DisplayName("Авторизация через кнопку «Личный кабинет»")
-    @Description("Авторизация через кнопку «Личный кабинет»")
+    @DisplayName("Авторизация через кнопку 'Личный кабинет'")
+    @Description("Авторизация через кнопку 'Личный кабинет'")
     public void accountButtonLoginTest() {
         mainPage.personalAccountButtonClick();
         loginPage
@@ -60,14 +59,14 @@ public class LoginTests extends BaseTest {
                 .setPassword(user.getPassword())
                 .buttonLoginClick();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
-
-        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
+        boolean actual = mainPage.isOrderButtonEnabled();
+        assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
+                actual);
     }
 
     @Test
-    @DisplayName("Авторизация через ссылку «Войти» в форме регистрации")
-    @Description("Авторизация через ссылку «Войти» в форме регистрации")
+    @DisplayName("Авторизация через ссылку 'Войти' в форме регистрации")
+    @Description("Авторизация через ссылку 'Войти' в форме регистрации")
     public void loginIntoButtonLoginRegistrationPageLoginTest() {
         mainPage.personalAccountButtonClick();
         loginPage.registerLinkClick();
@@ -77,14 +76,14 @@ public class LoginTests extends BaseTest {
                 .setPassword(user.getPassword())
                 .buttonLoginClick();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
-
-        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
+        boolean actual = mainPage.isOrderButtonEnabled();
+        assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
+                actual);
     }
 
     @Test
-    @DisplayName("Авторизация через ссылку «Войти» на странице восстановления пароля")
-    @Description("Авторизация через ссылку «Войти» на странице восстановления пароля")
+    @DisplayName("Авторизация через ссылку 'Войти' на странице восстановления пароля")
+    @Description("Авторизация через ссылку 'Войти' на странице восстановления пароля")
     public void loginIntoLinkLoginPasswordRecoveryPageTest() {
         mainPage.personalAccountButtonClick();
         loginPage.buttonLoginClick()
@@ -95,8 +94,8 @@ public class LoginTests extends BaseTest {
                 .setPassword(user.getPassword())
                 .buttonLoginClick();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
-
-        assertThat("Ожидаем перехода на главную страницу", actualUrl, is(MAIN_PAGE));
+        boolean actual = mainPage.isOrderButtonEnabled();
+        assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
+                actual);
     }
 }

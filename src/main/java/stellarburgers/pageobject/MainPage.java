@@ -3,6 +3,7 @@ package stellarburgers.pageobject;
 import org.openqa.selenium.WebDriver;
 import stellarburgers.elements.ButtonElement;
 
+import static com.codeborne.selenide.Condition.enabled;
 import static stellarburgers.pageobject.Constants.MAIN_PAGE;
 
 public class MainPage {
@@ -21,10 +22,10 @@ public class MainPage {
         this.driver = driver;
     }
 
-    public MainPage openMainPage() {
-        driver.get(MAIN_PAGE);
-        return this;
-    }
+//    public MainPage openMainPage() {
+//        driver.get(MAIN_PAGE);
+//        return this;
+//    }
 
     public MainPage personalAccountButtonClick() {
         ButtonElement element = new ButtonElement(personalAccountButton);
@@ -38,8 +39,12 @@ public class MainPage {
         return this;
     }
 
+    public boolean isOrderButtonEnabled() {
+        ButtonElement element = new ButtonElement(setOrderButton);
+        return element.isEnabled();
+    }
+
     public MainPage setOrderButtonClick() {
-        mainPage.openMainPage();
         ButtonElement element = new ButtonElement(setOrderButton);
         element.click();
         return this;

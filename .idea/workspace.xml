@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="ooooo.....">
-      <change afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/ClickThroughTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ConstructionPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/ConstructionTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/browser/Browser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoverPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoveryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/ClickThroughTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/ClickThroughTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" afterDir="false" />
     </list>
@@ -32,9 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2rhQIGQd2mvcyNXU4bNHdCLrdFR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,8 +50,10 @@
     "JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest.executor": "Run",
     "JUnit.ClickThroughTests.clickThroughPersonalAccountButtonWithoutAuthorizationTest.executor": "Debug",
     "JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest.executor": "Run",
+    "JUnit.ClickThroughTests.executor": "Run",
     "JUnit.LoginTests.LoginTest.executor": "Run",
     "JUnit.LoginTests.accountButtonLoginTest.executor": "Run",
+    "JUnit.LoginTests.executor": "Run",
     "JUnit.LoginTests.loginIntoAccountButtonLoginTest.executor": "Run",
     "JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest.executor": "Run",
     "JUnit.LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest.executor": "Run",
@@ -79,8 +84,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest">
-    <configuration name="ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RegistrationTests.successfulRegistrationTest">
+    <configuration name="ClickThroughTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -90,7 +95,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
-      <option name="METHOD_NAME" value="clickThroughPersonalAccountButtonAfterAuthorizationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClickThroughTests.clickThroughExitButtonFromAccountPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
+      <option name="METHOD_NAME" value="clickThroughExitButtonFromAccountPageTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,7 +148,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTests.successfulRegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -137,24 +157,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
-      <option name="METHOD_NAME" value="loginIntoButtonLoginRegistrationPageLoginTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
-      <option name="METHOD_NAME" value="loginIntoLinkLoginPasswordRecoveryPageTest" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
+      <option name="METHOD_NAME" value="successfulRegistrationTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,19 +189,19 @@
     <list>
       <item itemvalue="JUnit.test Chrome" />
       <item itemvalue="JUnit.test Yandex" />
-      <item itemvalue="JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" />
+      <item itemvalue="JUnit.ClickThroughTests" />
+      <item itemvalue="JUnit.ClickThroughTests.clickThroughExitButtonFromAccountPageTest" />
+      <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
       <item itemvalue="JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest" />
       <item itemvalue="JUnit.LoginTests.accountButtonLoginTest" />
-      <item itemvalue="JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" />
-      <item itemvalue="JUnit.LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest" />
-        <item itemvalue="JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" />
-        <item itemvalue="JUnit.LoginTests.loginIntoLinkLoginPasswordRecoveryPageTest" />
-        <item itemvalue="JUnit.LoginTests.loginIntoButtonLoginRegistrationPageLoginTest" />
+        <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
         <item itemvalue="JUnit.LoginTests.accountButtonLoginTest" />
+        <item itemvalue="JUnit.ClickThroughTests.clickThroughExitButtonFromAccountPageTest" />
+        <item itemvalue="JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest" />
+        <item itemvalue="JUnit.ClickThroughTests" />
       </list>
     </recent_temporary>
   </component>

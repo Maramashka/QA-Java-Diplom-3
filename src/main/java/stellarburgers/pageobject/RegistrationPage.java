@@ -8,10 +8,10 @@ import stellarburgers.elements.MessageElement;
 public class RegistrationPage {
     WebDriver driver;
 
-    private String inputEmail = "//input[@class='text input__textfield text_type_main-default'][1]";
-    private String inputPassword = ".//input[@type='password']";
-    private String inputName = "//input[@class='text input__textfield text_type_main-default'][1]";
-    private String buttonRegister = ".//button[text()='Зарегистрироваться']";
+    private String inputEmail = "//div[label[text()='Email']]/input";
+    private String inputPassword = "//input[@type='password']";
+    private String inputName = "//div[label[text()='Имя']]/input";
+    private String buttonRegister = "//button[text()='Зарегистрироваться']";
     private String incorrectPassword = "//p[text()='Некорректный пароль']";
     private String buttonLogin = "//a[text()='Войти']";
 
@@ -41,10 +41,9 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage registerButtonClick() {
+    public void registerButtonClick() {
         ButtonElement element = new ButtonElement(buttonRegister);
         element.click();
-        return this;
     }
 
     public boolean isErrorPasswordTextDisplayed() {

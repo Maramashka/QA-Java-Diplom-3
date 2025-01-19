@@ -15,7 +15,7 @@ public class Browser {
                 Configuration.browser = "CHROME";
                 break;
             case YANDEX:
-                System.setProperty("webdriver.chrome.driver", "C://Users//masha//Downloads//Yandex.exe/");
+                System.setProperty("webdriver.chrome.driver", "C://Users//masha//Downloads//yandexdriver-24.12.0.1810-win64//yandexdriver.exe/");
                 Configuration.browser = "CHROME";
                 break;
             default:
