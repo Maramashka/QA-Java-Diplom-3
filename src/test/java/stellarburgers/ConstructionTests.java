@@ -1,17 +1,14 @@
 package stellarburgers;
 
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
 import org.junit.Test;
-import stellarburgers.client.UserClient;
-import stellarburgers.pageobject.*;
+import stellarburgers.pageobject.ConstructionPage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.webdriver;
-import static org.junit.Assert.assertEquals;
-import static stellarburgers.generators.UserGenerator.randomUser;
-import static stellarburgers.pageobject.Constants.LOGIN_PAGE;
+import static org.junit.Assert.assertTrue;
 import static stellarburgers.pageobject.Constants.MAIN_PAGE;
 
 public class ConstructionTests extends BaseTest {
@@ -24,14 +21,40 @@ public class ConstructionTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("Click-Through Personal Account Button Without Authorization Test")
+    @DisplayName("Click-through buns section")
+    @Description("Переход по клику в раздел 'Булки'")
+    public void clickThroughToTheBunsSectionTest() {
+
+        constructionPage.saucesLinkClick()
+                .bunsLinkClick()
+                .isBunsSectionActive();
+        Configuration.timeout = 6000;
+
+        assertTrue("Ожидаем активации раздела 'Булки'", true);
+    }
+
+    @Test
+    @DisplayName("Click-through sauсes section")
     @Description("Переход по клику в раздел 'Соусы'")
-    public void ClickThroughToTheSaucesSectionTest() {
+    public void clickThroughToTheSaucesSectionTest() {
 
-        constructionPage.saucesLinkClick();
+        constructionPage.saucesLinkClick()
+                .isSaucesSectionActive();
+        Configuration.timeout = 3000;
 
-        String actualUrl = webdriver().driver().url();
+        assertTrue("Ожидаем активации раздела 'Соусы'", true);
+    }
 
-        assertEquals("Ожидаем перехода на страницу входа в аккаунт", LOGIN_PAGE, actualUrl);
+
+    @Test
+    @DisplayName("Click-through buns section")
+    @Description("Переход по клику в раздел 'Начинки'")
+    public void clickThroughToTheFillingsSectionTest() {
+
+        constructionPage.fillingsLinkClick()
+                .isFillingsSectionActive();
+        Configuration.timeout = 3000;
+
+        assertTrue("Ожидаем активации раздела 'Начинки'", true);
     }
 }

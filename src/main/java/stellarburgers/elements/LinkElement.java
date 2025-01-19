@@ -25,4 +25,8 @@ public class LinkElement {
         return linkText;
     }
 
+    public boolean isDisplayed() {
+        return linkElement.isDisplayed();
+    }
+
 }
