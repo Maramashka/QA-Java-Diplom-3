@@ -1,24 +1,19 @@
 package stellarburgers.pageobject;
 
-import org.openqa.selenium.WebDriver;
 import stellarburgers.elements.LinkElement;
 
+
 public class ConstructionPage {
-    WebDriver driver;
 
-    private String bunsLink = "//div[span[text()='Булки']]";
-    private String saucesLink = "//div[span[text()='Соусы']]";
-    private String fillingsLink = "//div[span[text()='Начинки']]";
+    private String bunsLink = ".//span[text()='Булки']";
+    private String saucesLink = ".//span[text()='Соусы']";
+    private String fillingsLink = ".//span[text()='Начинки']";
 
-    private String currentBunsSection = "//.div[contains(span/text(),'Булки') and contains(@class,'current')]";
-    private String currentSaucesSection = "//.div[contains(span/text(),'Соусы') and contains(@class,'current')]";
-    private String currentFillingsSection = "//.div[contains(span/text(),'Начинки') and contains(@class,'current')]";
+    private String currentBunsSection = ".//div[contains(@class, 'current')]/span[text()='Булки']";
+    private String currentSaucesSection = ".//div[contains(@class, 'current')]/span[text()='Соусы']";
+    private String currentFillingsSection = ".//div[contains(@class, 'current')]/span[text()='Начинки']";
 
     public ConstructionPage() {
-    }
-
-    public ConstructionPage(WebDriver driver) {
-        this.driver = driver;
     }
 
     public ConstructionPage bunsLinkClick() {

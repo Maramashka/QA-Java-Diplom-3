@@ -14,28 +14,8 @@ public class InputElement {
         inputElement = $(new By.ByXPath(locator));
     }
 
-    public InputElement(SelenideElement selenideElement) {
-        inputElement = selenideElement;
-    }
-
-    public void clearAndSetValue(String inputValue) {
-        inputElement.shouldBe(enabled).clear(); // доступен --> очищаем --> задаём значение
-        inputElement.setValue(inputValue);
-    }
-
-    public void setValue(String inputValue) { // доступен --> задаём значение, без очищения
+    public void setValue(String inputValue) {
         inputElement.shouldBe(enabled)
                 .setValue(inputValue);
-    }
-
-    public void setValueIfIsEmpty(String value) { // если пустой - задаём значение, если нет - не задаём
-        if (inputElement.getValue().isEmpty()) {
-            setValue(value);
-        }
-    }
-
-    public String getValue(String logMessage) {
-        String value = inputElement.getValue();
-        return value;
     }
 }

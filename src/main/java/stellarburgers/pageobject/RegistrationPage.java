@@ -1,12 +1,10 @@
 package stellarburgers.pageobject;
 
-import org.openqa.selenium.WebDriver;
 import stellarburgers.elements.ButtonElement;
 import stellarburgers.elements.InputElement;
 import stellarburgers.elements.MessageElement;
 
 public class RegistrationPage {
-    WebDriver driver;
 
     private String inputEmail = "//div[label[text()='Email']]/input";
     private String inputPassword = "//input[@type='password']";
@@ -17,11 +15,6 @@ public class RegistrationPage {
 
     public RegistrationPage() {
     }
-
-    public RegistrationPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
 
     public RegistrationPage setEmailValue(String email) {
         InputElement element = new InputElement(inputEmail);
@@ -50,12 +43,6 @@ public class RegistrationPage {
         MessageElement element = new MessageElement(incorrectPassword);
         element.isDisplayed();
         return true;
-    }
-
-    public String getErrorPasswordText() {
-        MessageElement element = new MessageElement(incorrectPassword);
-        element.isDisplayed();
-        return element.getText();
     }
 
     public RegistrationPage buttonLoginClick() {

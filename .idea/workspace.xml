@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="uuuuuu.....">
+    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="Just a little more, just a little more">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/InputElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/InputElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ConstructionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ConstructionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoveryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoveryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/ConstructionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/ConstructionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +52,9 @@
     "JUnit.ConstructionTests.ClickThroughToTheFillingsSectionTest.executor": "Run",
     "JUnit.ConstructionTests.ClickThroughToTheSaucesSectionTest.executor": "Run",
     "JUnit.ConstructionTests.clickThroughToTheBunsSectionTest.executor": "Run",
+    "JUnit.ConstructionTests.clickThroughToTheFillingsSectionTest.executor": "Run",
+    "JUnit.ConstructionTests.clickThroughToTheSaucesSectionTest.executor": "Run",
+    "JUnit.ConstructionTests.executor": "Run",
     "JUnit.LoginTests.LoginTest.executor": "Run",
     "JUnit.LoginTests.accountButtonLoginTest.executor": "Run",
     "JUnit.LoginTests.executor": "Run",
@@ -79,8 +88,8 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ConstructionTests.clickThroughToTheBunsSectionTest">
-    <configuration name="ConstructionTests.ClickThroughToTheBunsSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConstructionTests.clickThroughToTheSaucesSectionTest">
+    <configuration name="ConstructionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -90,40 +99,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.ConstructionTests" />
-      <option name="METHOD_NAME" value="ClickThroughToTheBunsSectionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConstructionTests.ClickThroughToTheFillingsSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.ConstructionTests" />
-      <option name="METHOD_NAME" value="ClickThroughToTheFillingsSectionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConstructionTests.ClickThroughToTheSaucesSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.ConstructionTests" />
-      <option name="METHOD_NAME" value="ClickThroughToTheSaucesSectionTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,7 +120,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTests.successfulRegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConstructionTests.clickThroughToTheSaucesSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ConstructionTests" />
+      <option name="METHOD_NAME" value="clickThroughToTheSaucesSectionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +161,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
-      <option name="METHOD_NAME" value="successfulRegistrationTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -185,19 +191,19 @@
     <list>
       <item itemvalue="JUnit.test Chrome" />
       <item itemvalue="JUnit.test Yandex" />
-      <item itemvalue="JUnit.ConstructionTests.ClickThroughToTheBunsSectionTest" />
-      <item itemvalue="JUnit.ConstructionTests.ClickThroughToTheFillingsSectionTest" />
-      <item itemvalue="JUnit.ConstructionTests.ClickThroughToTheSaucesSectionTest" />
+      <item itemvalue="JUnit.ConstructionTests" />
       <item itemvalue="JUnit.ConstructionTests.clickThroughToTheBunsSectionTest" />
-      <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
+      <item itemvalue="JUnit.ConstructionTests.clickThroughToTheSaucesSectionTest" />
+      <item itemvalue="JUnit.LoginTests" />
+      <item itemvalue="JUnit.RegistrationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConstructionTests.clickThroughToTheSaucesSectionTest" />
         <item itemvalue="JUnit.ConstructionTests.clickThroughToTheBunsSectionTest" />
-        <item itemvalue="JUnit.ConstructionTests.ClickThroughToTheBunsSectionTest" />
-        <item itemvalue="JUnit.ConstructionTests.ClickThroughToTheFillingsSectionTest" />
-        <item itemvalue="JUnit.ConstructionTests.ClickThroughToTheSaucesSectionTest" />
-        <item itemvalue="JUnit.RegistrationTests.successfulRegistrationTest" />
+        <item itemvalue="JUnit.ConstructionTests" />
+        <item itemvalue="JUnit.RegistrationTests" />
+        <item itemvalue="JUnit.LoginTests" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737271849307</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Just a little more, just a little more">
+      <option name="closed" value="true" />
+      <created>1737276987210</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737276987210</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -267,7 +281,8 @@
     <MESSAGE value="Next Attempt" />
     <MESSAGE value="ooooo....." />
     <MESSAGE value="uuuuuu....." />
-    <option name="LAST_COMMIT_MESSAGE" value="uuuuuu....." />
+    <MESSAGE value="Just a little more, just a little more" />
+    <option name="LAST_COMMIT_MESSAGE" value="Just a little more, just a little more" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

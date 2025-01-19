@@ -28,7 +28,7 @@ public class ConstructionTests extends BaseTest {
         constructionPage.saucesLinkClick()
                 .bunsLinkClick()
                 .isBunsSectionActive();
-        Configuration.timeout = 6000;
+        Configuration.timeout = 3000;
 
         assertTrue("Ожидаем активации раздела 'Булки'", true);
     }

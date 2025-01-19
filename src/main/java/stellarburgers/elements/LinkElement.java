@@ -28,5 +28,4 @@ public class LinkElement {
     public boolean isDisplayed() {
         return linkElement.isDisplayed();
     }
-
 }

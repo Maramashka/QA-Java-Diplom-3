@@ -1,12 +1,10 @@
 package stellarburgers.pageobject;
 
-import org.openqa.selenium.WebDriver;
 import stellarburgers.elements.ButtonElement;
 import stellarburgers.elements.InputElement;
 import stellarburgers.elements.LinkElement;
 
 public class LoginPage {
-    WebDriver driver;
 
     private String inputEmail = ".//input[@name='name']";
     private String inputPassword = ".//input[@name='Пароль']";
@@ -16,10 +14,6 @@ public class LoginPage {
 
 
     public LoginPage() {
-    }
-
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
     }
 
     public LoginPage registerLinkClick() {
