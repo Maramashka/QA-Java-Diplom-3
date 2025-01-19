@@ -1,20 +1,18 @@
 package stellarburgers.pageobject;
 
+import io.qameta.allure.Step;
 import stellarburgers.elements.ButtonElement;
 
 public class AccountPage {
 
-    private String emailLocator = ".//input[text()='Логин']";
-    private String passwordLocator = ".//input[text()='Пароль']";
-    private String nameLocator = ".//input[text()='Имя']";
-    private String saveButtonLocator = ".//button[text()='Сохранить']";
-    private String exitButton = ".//button[text()='Выход']";
+    private String buttonExit = ".//button[text()='Выход']";
 
     public AccountPage() {
     }
 
-    public void exitButtonClick() {
-        ButtonElement element = new ButtonElement(exitButton);
+    @Step("Click to button Exit")
+    public void clickButtonExit() {
+        ButtonElement element = new ButtonElement(buttonExit);
         element.click();
     }
 }

@@ -1,5 +1,6 @@
 package stellarburgers.pageobject;
 
+import io.qameta.allure.Step;
 import stellarburgers.elements.LinkElement;
 
 public class PasswordRecoveryPage {
@@ -9,7 +10,8 @@ public class PasswordRecoveryPage {
     public PasswordRecoveryPage() {
     }
 
-    public void linkPasswordRecoverClick() {
+    @Step("Click link Password Recover")
+    public void clickLinkPasswordRecover() {
         LinkElement element = new LinkElement(linkLogin);
         element.click();
     }

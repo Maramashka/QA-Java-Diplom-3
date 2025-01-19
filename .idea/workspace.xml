@@ -4,17 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="Just a little more, just a little more">
+    <list default="true" id="3d20a729-1343-4643-b007-19756aacecfc" name="Changes" comment="add one lost test :)">
+      <change afterPath="$PROJECT_DIR$/allure-results/073e5567-89a5-4cf1-82d0-0d508c283307-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/076e77ff-4cdd-4f8b-bce1-74afae265939-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/0f8102c0-f80e-4813-a9a8-4799c69e7795-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/3acb7f15-1fac-48c4-a9eb-7e7e9af407f2-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/3e389b26-d112-4f20-8d92-d5098437f078-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/5c868daa-87af-47c5-8ac6-fecb904c6344-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/61b4c06b-204f-4e28-97c8-dddee9180879-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/68eb47c7-bb70-4648-907e-d04e2d72145c-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/6c5bdd6c-3bc0-4f80-bc6d-b51c5660cd14-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/7952fb18-5bea-4e2d-bbe9-26d914648691-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/838f858f-4c73-4409-bde5-59f55e1ee174-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/83aa0104-e947-4218-bdaf-62a302de5ef0-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/854ab91f-0669-4171-b2ea-2ef435d4f621-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/9a1fde3e-fc98-4737-8755-e171a1422443-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/9f0e0a18-2410-4dcb-83dc-6e238b4f4175-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/9f43b31b-2bcd-4c45-a79f-21e9c36330fc-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b5c1197e-93d6-46e3-86a7-a82d341c901f-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/c9c51398-e28a-48a1-90b9-5f991129ae7a-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/e87b58ad-ebcc-4ab6-b1e4-82d26b575764-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ee6cc36c-0fa8-4fb4-9243-5169434d6558-attachment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/browser/Browser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/browser/Browser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/ButtonElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/InputElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/InputElement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/LinkElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/MessageElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/elements/TitleElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/AccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ConstructionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/ConstructionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/MainPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoveryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/PasswordRecoveryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stellarburgers/pageobject/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/ClickThroughTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/ClickThroughTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/ConstructionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/ConstructionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stellarburgers/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +72,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "JUnit.ClickThroughTests.clickThroughExitButtonFromAccountPageTest.executor": "Run",
+    "JUnit.ClickThroughTests.clickThroughLogoFromAccountPageTest.executor": "Run",
     "JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest.executor": "Run",
     "JUnit.ClickThroughTests.clickThroughPersonalAccountButtonWithoutAuthorizationTest.executor": "Debug",
     "JUnit.ClickThroughTests.clickThroughСonstructionButtonFromAccountPageTest.executor": "Run",
@@ -83,13 +114,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "develop3",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Java/PracticumProjects/QA-Java-Diplom-2",
+    "last_opened_file_path": "C:/Java/PracticumProjects/QA-Java-Diplom-1",
     "onboarding.tips.debug.path": "C:/Java/PracticumProjects/QA-Java-Diplom-3/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ConstructionTests.clickThroughToTheSaucesSectionTest">
-    <configuration name="ConstructionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LoginTests">
+    <configuration name="ClickThroughTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -98,13 +129,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.ConstructionTests" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructionTests.clickThroughToTheBunsSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClickThroughTests.clickThroughExitButtonFromAccountPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +144,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.ConstructionTests" />
-      <option name="METHOD_NAME" value="clickThroughToTheBunsSectionTest" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
+      <option name="METHOD_NAME" value="clickThroughExitButtonFromAccountPageTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructionTests.clickThroughToTheSaucesSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClickThroughTests.clickThroughLogoFromAccountPageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QA-Java-Diplom-3" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +160,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.ConstructionTests" />
-      <option name="METHOD_NAME" value="clickThroughToTheSaucesSectionTest" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
+      <option name="METHOD_NAME" value="clickThroughLogoFromAccountPageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QA-Java-Diplom-3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stellarburgers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stellarburgers" />
+      <option name="MAIN_CLASS_NAME" value="stellarburgers.ClickThroughTests" />
+      <option name="METHOD_NAME" value="clickThroughPersonalAccountButtonAfterAuthorizationTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,21 +193,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="stellarburgers" />
       <option name="MAIN_CLASS_NAME" value="stellarburgers.LoginTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QA-Java-Diplom-3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="stellarburgers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="stellarburgers" />
-      <option name="MAIN_CLASS_NAME" value="stellarburgers.RegistrationTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,19 +223,19 @@
     <list>
       <item itemvalue="JUnit.test Chrome" />
       <item itemvalue="JUnit.test Yandex" />
-      <item itemvalue="JUnit.ConstructionTests" />
-      <item itemvalue="JUnit.ConstructionTests.clickThroughToTheBunsSectionTest" />
-      <item itemvalue="JUnit.ConstructionTests.clickThroughToTheSaucesSectionTest" />
+      <item itemvalue="JUnit.ClickThroughTests.clickThroughExitButtonFromAccountPageTest" />
+      <item itemvalue="JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" />
       <item itemvalue="JUnit.LoginTests" />
-      <item itemvalue="JUnit.RegistrationTests" />
+      <item itemvalue="JUnit.ClickThroughTests" />
+      <item itemvalue="JUnit.ClickThroughTests.clickThroughLogoFromAccountPageTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConstructionTests.clickThroughToTheSaucesSectionTest" />
-        <item itemvalue="JUnit.ConstructionTests.clickThroughToTheBunsSectionTest" />
-        <item itemvalue="JUnit.ConstructionTests" />
-        <item itemvalue="JUnit.RegistrationTests" />
         <item itemvalue="JUnit.LoginTests" />
+        <item itemvalue="JUnit.ClickThroughTests.clickThroughExitButtonFromAccountPageTest" />
+        <item itemvalue="JUnit.ClickThroughTests.clickThroughPersonalAccountButtonAfterAuthorizationTest" />
+        <item itemvalue="JUnit.ClickThroughTests" />
+        <item itemvalue="JUnit.ClickThroughTests.clickThroughLogoFromAccountPageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -272,17 +304,49 @@
       <option name="project" value="LOCAL" />
       <updated>1737276987210</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="My little commit">
+      <option name="closed" value="true" />
+      <created>1737282955072</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737282955072</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add one lost test :)">
+      <option name="closed" value="true" />
+      <created>1737291382462</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737291382462</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="My beginning" />
     <MESSAGE value="O My God" />
     <MESSAGE value="Next Attempt" />
     <MESSAGE value="ooooo....." />
     <MESSAGE value="uuuuuu....." />
     <MESSAGE value="Just a little more, just a little more" />
-    <option name="LAST_COMMIT_MESSAGE" value="Just a little more, just a little more" />
+    <MESSAGE value="My little commit" />
+    <MESSAGE value="add one lost test :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add one lost test :)" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

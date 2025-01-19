@@ -21,25 +21,25 @@ public class ConstructionTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("Click-through buns section")
     @Description("Переход по клику в раздел 'Булки'")
+    @DisplayName("Click-through buns section")
     public void clickThroughToTheBunsSectionTest() {
 
-        constructionPage.saucesLinkClick()
-                .bunsLinkClick()
-                .isBunsSectionActive();
+        constructionPage.clickLinkSauces()
+                .clickLinkBuns()
+                .isActiveSectionBuns();
         Configuration.timeout = 3000;
 
         assertTrue("Ожидаем активации раздела 'Булки'", true);
     }
 
     @Test
-    @DisplayName("Click-through sauсes section")
     @Description("Переход по клику в раздел 'Соусы'")
+    @DisplayName("Click-through sauсes section")
     public void clickThroughToTheSaucesSectionTest() {
 
-        constructionPage.saucesLinkClick()
-                .isSaucesSectionActive();
+        constructionPage.clickLinkSauces()
+                .isActiveSectionSauces();
         Configuration.timeout = 3000;
 
         assertTrue("Ожидаем активации раздела 'Соусы'", true);
@@ -47,12 +47,12 @@ public class ConstructionTests extends BaseTest {
 
 
     @Test
-    @DisplayName("Click-through buns section")
     @Description("Переход по клику в раздел 'Начинки'")
+    @DisplayName("Click-through buns section")
     public void clickThroughToTheFillingsSectionTest() {
 
-        constructionPage.fillingsLinkClick()
-                .isFillingsSectionActive();
+        constructionPage.clickLinkFillings()
+                .isActiveSectionFillings();
         Configuration.timeout = 3000;
 
         assertTrue("Ожидаем активации раздела 'Начинки'", true);

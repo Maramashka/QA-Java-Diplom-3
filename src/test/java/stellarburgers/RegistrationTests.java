@@ -37,21 +37,21 @@ public class RegistrationTests extends BaseTest {
     @DisplayName("Регистрация пользователя с корректными данными")
     @Description("Проверка регистрации пользователя с корректными данными")
     public void successfulRegistrationTest() {
-        mainPage.personalAccountButtonClick();
-        loginPage.registerLinkClick();
+        mainPage.clickButtonPersonalAccount();
+        loginPage.clickLinkRegister();
 
         registrationPage
-                .setNameValue(user.getName())
-                .setEmailValue(user.getEmail())
-                .setPasswordValue(user.getPassword())
-                .registerButtonClick();
+                .setValueName(user.getName())
+                .setValueEmail(user.getEmail())
+                .setValuePassword(user.getPassword())
+                .clickButtonRegister();
 
         loginPage
                 .setEmail(user.getEmail())
                 .setPassword(user.getPassword())
-                .buttonLoginClick();
+                .clickButtonLogin();
 
-        boolean actual = mainPage.isOrderButtonEnabled();
+        boolean actual = mainPage.isEnabledButtonOrder();
         assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
                 actual);
     }
@@ -61,17 +61,17 @@ public class RegistrationTests extends BaseTest {
     @DisplayName("Ошибка для некорректного пароля")
     @Description("Проверка регистрации с паролем меньше 6 символов")
     public void errorForIncorrectShortPasswordErrorTest() {
-        mainPage.personalAccountButtonClick();
-        loginPage.registerLinkClick();
+        mainPage.clickButtonPersonalAccount();
+        loginPage.clickLinkRegister();
 
         registrationPage.
-                setNameValue(user.getName())
-                .setEmailValue(user.getEmail())
-                .setPasswordValue(faker.
+                setValueName(user.getName())
+                .setValueEmail(user.getEmail())
+                .setValuePassword(faker.
                         internet().password(5, 10, true, true, true))
-                .registerButtonClick();
+                .clickButtonRegister();
 
-        Boolean actual = registrationPage.isErrorPasswordTextDisplayed();
+        Boolean actual = registrationPage.isDisplayedTitlePasswordError();
         assertTrue("Ожидаем сообщения о некорректном пароле", true);
     }
 }

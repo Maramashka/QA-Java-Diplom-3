@@ -1,8 +1,9 @@
 package stellarburgers.pageobject;
 
+import io.qameta.allure.Step;
 import stellarburgers.elements.ButtonElement;
 import stellarburgers.elements.InputElement;
-import stellarburgers.elements.MessageElement;
+import stellarburgers.elements.TitleElement;
 
 public class RegistrationPage {
 
@@ -10,42 +11,48 @@ public class RegistrationPage {
     private String inputPassword = "//input[@type='password']";
     private String inputName = "//div[label[text()='Имя']]/input";
     private String buttonRegister = "//button[text()='Зарегистрироваться']";
-    private String incorrectPassword = "//p[text()='Некорректный пароль']";
+    private String titleIncorrectPassword = "//p[text()='Некорректный пароль']";
     private String buttonLogin = "//a[text()='Войти']";
 
     public RegistrationPage() {
     }
 
-    public RegistrationPage setEmailValue(String email) {
+    @Step("Set value Email")
+    public RegistrationPage setValueEmail(String email) {
         InputElement element = new InputElement(inputEmail);
         element.setValue(email);
         return this;
     }
 
-    public RegistrationPage setPasswordValue(String password) {
+    @Step("Set value Password")
+    public RegistrationPage setValuePassword(String password) {
         InputElement element = new InputElement(inputPassword);
         element.setValue(password);
         return this;
     }
 
-    public RegistrationPage setNameValue(String name) {
+    @Step("Set value Name")
+    public RegistrationPage setValueName(String name) {
         InputElement element = new InputElement(inputName);
         element.setValue(name);
         return this;
     }
 
-    public void registerButtonClick() {
+    @Step("Click button Register")
+    public void clickButtonRegister() {
         ButtonElement element = new ButtonElement(buttonRegister);
         element.click();
     }
 
-    public boolean isErrorPasswordTextDisplayed() {
-        MessageElement element = new MessageElement(incorrectPassword);
+    @Step("Is displayed title Password Error")
+    public boolean isDisplayedTitlePasswordError() {
+        TitleElement element = new TitleElement(titleIncorrectPassword);
         element.isDisplayed();
         return true;
     }
 
-    public RegistrationPage buttonLoginClick() {
+    @Step("Click button Login")
+    public RegistrationPage clickButtonLogin() {
         ButtonElement element = new ButtonElement(buttonLogin);
         element.click();
         return this;

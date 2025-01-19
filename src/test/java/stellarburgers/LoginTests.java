@@ -38,12 +38,12 @@ public class LoginTests extends BaseTest {
     @DisplayName("Авторизация через кнопку 'Войти в аккаунт' на главной")
     @Description("Авторизация через кнопку 'Войти в аккаунт' на главной странице")
     public void loginIntoAccountButtonLoginTest() {
-        mainPage.loginIntoAccountButtonClick();
+        mainPage.clickButtonLoginIntoAccount();
         loginPage.setEmail(user.getEmail());
         loginPage.setPassword(user.getPassword());
-        loginPage.buttonLoginClick();
+        loginPage.clickButtonLogin();
 
-        boolean actual = mainPage.isOrderButtonEnabled();
+        boolean actual = mainPage.isEnabledButtonOrder();
         assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
                 actual);
 
@@ -53,13 +53,13 @@ public class LoginTests extends BaseTest {
     @DisplayName("Авторизация через кнопку 'Личный кабинет'")
     @Description("Авторизация через кнопку 'Личный кабинет'")
     public void accountButtonLoginTest() {
-        mainPage.personalAccountButtonClick();
+        mainPage.clickButtonPersonalAccount();
         loginPage
                 .setEmail(user.getEmail())
                 .setPassword(user.getPassword())
-                .buttonLoginClick();
+                .clickButtonLogin();
 
-        boolean actual = mainPage.isOrderButtonEnabled();
+        boolean actual = mainPage.isEnabledButtonOrder();
         assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
                 actual);
     }
@@ -68,15 +68,15 @@ public class LoginTests extends BaseTest {
     @DisplayName("Авторизация через ссылку 'Войти' в форме регистрации")
     @Description("Авторизация через ссылку 'Войти' в форме регистрации")
     public void loginIntoButtonLoginRegistrationPageLoginTest() {
-        mainPage.personalAccountButtonClick();
-        loginPage.registerLinkClick();
-        registrationPage.buttonLoginClick();
+        mainPage.clickButtonPersonalAccount();
+        loginPage.clickLinkRegister();
+        registrationPage.clickButtonLogin();
         loginPage
                 .setEmail(user.getEmail())
                 .setPassword(user.getPassword())
-                .buttonLoginClick();
+                .clickButtonLogin();
 
-        boolean actual = mainPage.isOrderButtonEnabled();
+        boolean actual = mainPage.isEnabledButtonOrder();
         assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
                 actual);
     }
@@ -85,16 +85,16 @@ public class LoginTests extends BaseTest {
     @DisplayName("Авторизация через ссылку 'Войти' на странице восстановления пароля")
     @Description("Авторизация через ссылку 'Войти' на странице восстановления пароля")
     public void loginIntoLinkLoginPasswordRecoveryPageTest() {
-        mainPage.personalAccountButtonClick();
-        loginPage.buttonLoginClick()
-                .linkPasswordRecoverClick();
-        passwordRecoveryPage.linkPasswordRecoverClick();
+        mainPage.clickButtonPersonalAccount();
+        loginPage.clickButtonLogin()
+                .clickLinkPasswordRecover();
+        passwordRecoveryPage.clickLinkPasswordRecover();
         loginPage
                 .setEmail(user.getEmail())
                 .setPassword(user.getPassword())
-                .buttonLoginClick();
+                .clickButtonLogin();
 
-        boolean actual = mainPage.isOrderButtonEnabled();
+        boolean actual = mainPage.isEnabledButtonOrder();
         assertTrue("Ожидаем трансформации кнопки 'Войти в аккаунт' на главной странице в кнопку 'Оформить заказ'",
                 actual);
     }

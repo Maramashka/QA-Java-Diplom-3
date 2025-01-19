@@ -10,7 +10,6 @@ import stellarburgers.models.User;
 import java.io.IOException;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.Selenide.open;
 import static stellarburgers.browser.Browser.initDriver;
 import static stellarburgers.pageobject.Constants.BASE_URI;
 

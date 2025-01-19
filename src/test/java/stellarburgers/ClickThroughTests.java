@@ -33,58 +33,74 @@ public class ClickThroughTests extends BaseTest {
     }
 
     @Test
-    @DisplayName("Click-Through Personal Account Button Without Authorization Test")
     @Description("Переход по клику на кнопку 'Личный кабинет' для неавторизованного пользователя")
+    @DisplayName("Click-through personal account button without authorization test")
     public void clickThroughPersonalAccountButtonWithoutAuthorizationTest() {
-        mainPage.personalAccountButtonClick();
+        mainPage.clickButtonPersonalAccount();
         String actualUrl = webdriver().driver().url();
 
         assertEquals("Ожидаем перехода на страницу входа в аккаунт", LOGIN_PAGE, actualUrl);
     }
 
     @Test
-    @DisplayName("Click-Through Personal Account Button After Authorization Test")
     @Description("Переход по клику на кнопку 'Личный кабинет' для авторизованного пользователя")
+    @DisplayName("Click-through personal account button after authorization test")
     public void clickThroughPersonalAccountButtonAfterAuthorizationTest() {
         user = randomUser();
         UserClient userClient = new UserClient();
         userClient.create(user);
         userClient.login(user);
-        mainPage.personalAccountButtonClick();
+        mainPage.clickButtonPersonalAccount();
+        Configuration.timeout = 5000;
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
+        String actualUrl = webdriver().driver().url();
         assertEquals("Ожидаем перехода в личный кабинет", ACCOUNT_PAGE, actualUrl);
     }
 
 
     @Test
-    @DisplayName("Click-Through Сonstruction From Account Page Test")
     @Description("Переход по клику на 'Конструктор' из личного кабинета")
+    @DisplayName("Click-through construction from account page test")
     public void clickThroughСonstructionButtonFromAccountPageTest() {
         user = randomUser();
         UserClient userClient = new UserClient();
         userClient.create(user);
         userClient.login(user);
-        mainPage.personalAccountButtonClick()
-                .buttonConstructionClick();
+        mainPage.clickButtonPersonalAccount()
+                .clickButtonConstruction();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
+        String actualUrl = webdriver().driver().url();
         assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
     }
 
     @Test
-    @DisplayName("click Through Exit Button From Account Page Test")
+    @Description("Переход на лого из личного кабинета")
+    @DisplayName("Click-through logo from account page test")
+    public void clickThroughLogoFromAccountPageTest() {
+        user = randomUser();
+        UserClient userClient = new UserClient();
+        userClient.create(user);
+        userClient.login(user);
+        mainPage.clickButtonPersonalAccount()
+                .clickLogo();
+
+        String actualUrl = webdriver().driver().url();
+        assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
+    }
+
+    @Test
     @Description("Выход из аккаунта по клику на 'Выход' из личного кабинета")
+    @DisplayName("click through exit button from account page test")
     public void clickThroughExitButtonFromAccountPageTest() {
         user = randomUser();
         UserClient userClient = new UserClient();
         userClient.create(user);
         userClient.login(user);
-        mainPage.personalAccountButtonClick();
-        accountPage.exitButtonClick();
+        mainPage.clickButtonPersonalAccount();
         Configuration.timeout = 4000;
+        accountPage.clickButtonExit();
 
-        String actualUrl = webdriver().driver().getCurrentFrameUrl();
+        String actualUrl = webdriver().driver().url();
         assertEquals("Ожидаем перехода на страницу авторизации", LOGIN_PAGE, actualUrl);
     }
 }
