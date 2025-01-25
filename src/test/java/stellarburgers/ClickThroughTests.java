@@ -70,6 +70,7 @@ public class ClickThroughTests extends BaseTest {
                 .clickButtonConstruction();
 
         String actualUrl = webdriver().driver().url();
+<<<<<<< HEAD
         assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
     }
 
@@ -85,10 +86,33 @@ public class ClickThroughTests extends BaseTest {
                 .clickLogo();
 
         String actualUrl = webdriver().driver().url();
+=======
+>>>>>>> 12e7dfc74dd2a85aef90d34560b06581989adbb3
         assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
     }
 
     @Test
+<<<<<<< HEAD
+=======
+    @DisplayName("Click-Through Logo From Account Page Test")
+    @Description("Переход на лого из личного кабинета")
+    public void clickThroughLogoFromAccountPageTest() {
+        user = randomUser();
+        UserClient userClient = new UserClient();
+        userClient.create(user);
+        userClient.login(user);
+        mainPage.personalAccountButtonClick()
+                .logoClick();
+
+        String actualUrl = webdriver().driver().url();
+        assertEquals("Ожидаем перехода на главную страницу", MAIN_PAGE, actualUrl);
+    }
+
+
+
+    @Test
+    @DisplayName("click Through Exit Button From Account Page Test")
+>>>>>>> 12e7dfc74dd2a85aef90d34560b06581989adbb3
     @Description("Выход из аккаунта по клику на 'Выход' из личного кабинета")
     @DisplayName("click through exit button from account page test")
     public void clickThroughExitButtonFromAccountPageTest() {
